@@ -1,0 +1,75 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+<title>Your New Application</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+<style type="text/css">
+    /* Prevent copy paste for all elements except text fields */
+    *  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+    input, textarea  { -webkit-user-select:text; }
+    
+    /* Set up the page with a default background image */
+    body {
+        background-color:#fff;
+        color:#000;
+        font-family:Arial;
+        font-size:18pt;
+        margin:0px;padding:0px;
+        background-image:url('images/background.jpg');
+    }
+</style>
+<script src='intelxdk.js'></script>
+<script type="text/javascript">
+/* This function runs once the page is loaded, but appMobi is not yet active */
+var init = function(){
+
+};
+window.addEventListener("load",init,false);  
+
+/* This code prevents users from dragging the page */
+var preventDefaultScroll = function(event) {
+    event.preventDefault();
+    window.scroll(0,0);
+    return false;
+};
+document.addEventListener('touchmove', preventDefaultScroll, false);
+
+/* This code is used to run as soon as appMobi activates */
+var onDeviceReady=function(){
+	
+	//hide splash screen
+	AppMobi.device.hideSplashScreen();	
+};
+document.addEventListener("appMobi.device.ready",onDeviceReady,false);    
+</script>
+
+</head>
+    
+<body>
+
+<table border="0" width="2" cellspacing="25">
+  <tr>
+    <td><a href="http://m.jstor.org">
+<img src="images/jstor_logo.gif" width="120" height="120" align="center" valign="middle"/></td>
+    <td><a href="http://m.ebscohost.com">
+<img src="images/ebsco.gif" width="120" height="120" align="center" valign="middle"/></td>
+  </tr>
+  <tr>
+    <td><a href="http://m.nlm.nih.gov">
+<img src="images/med.gif" width="120" height="120" align="center" valign="middle"/>  </td>
+    <td><a href="http://m.emeraldinsight.com">
+<img src="images/Emerald.gif" width="120" height="120" align="center" valign="middle"/></td>
+  </tr>
+  
+
+</table><br/><br/>
+    
+
+    
+        
+    
+   <center><a href="https://m.app.box.com/s/swi3nkpcc3asxncgv9cq" STYLE="text-decoration: none;">Shared Stuff</a></center>
+    
+</body>
+    
+</html>
